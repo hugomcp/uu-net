@@ -1,0 +1,70 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16140\viewh13440\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 This file helps the execution of the Python script that implements the second (main) learning phase of paper entitled:\
+\
+####################################################################\
+The UU-Net: Reversible Face De-Identification for Visual Surveillance Video Footage \
+Hugo Proenca \
+ArXiv, 2020\
+\
+####################################################################\
+\
+\
+An example of the configuration file is as follows:\
+\
+###############################################\
+--input_folder\
+/armazem/Anonymization/P-DESTRE/frames_faces\
+--output_folder\
+results/Anonymization/P-DESTRE\
+--subjects_batch\
+4\
+--images_subject_batch\
+8\
+--tot_discriminator\
+5\
+--weight_generator\
+1.0\
+--weight_discriminator_faceness_O\
+1.0\
+--weight_discriminator_faceness_A\
+1.0\
+--interval_write_generator_output\
+250\
+--learning_rate_discriminator\
+1.25e-05\
+--learning_rate_generator\
+5e-05\
+--image_width\
+64\
+--image_height\
+64\
+--epochs\
+120000\
+--discriminator_R_ID_path \
+results/Anonymization/P-DESTRE/Recognizer_2020_05_21_08_10_31\
+--discriminator_R_gender_path\
+results/Anonymization/P-DESTRE/Recognizer_2020_05_21_14_05_33\
+--discriminator_R_ethnicity_path\
+results/Anonymization/P-DESTRE/Recognizer_2020_05_21_16_34_50\
+--discriminator_R_haircolor_path\
+results/Anonymization/P-DESTRE/Recognizer_2020_05_21_17_29_44\
+--discriminator_R_hairstyle_path\
+results/Anonymization/P-DESTRE/Recognizer_2020_05_21_17_55_29\
+--discriminator_R_beard_path\
+results/Anonymization/P-DESTRE/Recognizer_2020_05_21_19_50_11\
+--discriminator_R_moustache_path\
+results/Anonymization/P-DESTRE/Recognizer_2020_05_21_21_10_20\
+--batch_size\
+32\
+###############################################\
+\
+\
+\
+\
+}
