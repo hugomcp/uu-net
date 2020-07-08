@@ -73,8 +73,14 @@ ap.add_argument('-w4', '--weight_con', type=float, default=1, help='Weight of th
 ap.add_argument('-w5', '--weight_div', type=float, default=1, help='Weight of the DIV term')
 ap.add_argument('-w6', '--weight_dis', type=float, default=1, help='Weight of the DIS term')
 
+S_VECTOR = [-1, -1, -1, -1, -1, -1, -1]		# as many elements as the number of discriminators used.   
+
+
 args = ap.parse_args()
 args.batch_size = args.subjects_batch * args.images_subject_batch
+
+
+
 
 ############################################################################################
 
@@ -344,7 +350,8 @@ def standardize_imgs(elt):
 
 
 def sum_imgs(elts):
-    return tf.add_n([elts[0], elts[1], elts[2], elts[3], elts[4], elts[5], elts[6]])
+    return tf.add_n([elts[0] * -S_VECTOR[0], elts[1] * -S_VECTOR[1], elts[2]* -S_VECTOR[2], 
+    				elts[3]* -S_VECTOR[3], elts[4]* -S_VECTOR[4], elts[5] * -S_VECTOR[5], elts[6]* -S_VECTOR[6]])
 
 
 def diff_distances(vests):
